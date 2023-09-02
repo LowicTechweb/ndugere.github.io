@@ -1,0 +1,147 @@
+CTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triplesolutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <!-- Your navigation code here -->
+        <nav>
+            <a href="index.html"><img src="images/logo.png.jpg" alt="Image 2"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACTS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1> CONTACT US HERE</h1>
+    </header>
+    </section>
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.84546635858!2d36.802379174132284!3d-1.2653006356017937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173fc261c85d%3A0xc5db81b7b61f20ae!2sMadonna%20House!5e0!3m2!1sen!2ske!4v1693666890531!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+    </section>
+    <section class="contact">
+        <!-- Row for Contact Details and Form -->
+        <div class="row">
+            <!-- Contact Details Column -->
+            <div class="contact-col">
+                <div class="info-column location">
+                    <i class="fas fa-home fa-3x"></i>
+                    <h4>Location</h4>
+                    <p>Madonna House, Mezzanine Flr <br> Westlands Road<br> Nairobi, Kenya</p>
+                </div>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>
+                        <h5>Phone Number:</h5>
+                        <p>+254703243240</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span>
+                        <h5>Email:</h5>
+                        <p>info@triplesolutions.co.ke</p>
+                        <p>enyamosi@triplesolutions.co.ke</p>
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Contact Form Column -->
+            <div class="contact-col">
+                <form action="form-handler.php" method="post">
+                    <input type="text" name="name" placeholder="Enter Your Name" required>
+                    <input type="email" name="email" placeholder="Enter Your Email" required>
+                    <input type="tel" name="phone" placeholder="Enter Your Phone Number">
+                    <input type="text" name="subject" placeholder="Enter Your Subject" required>
+                    <textarea rows="8" name="message" placeholder="Enter Your Message" required></textarea>
+                    <button type="submit" class="hero-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="foo">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>Triple Solutions Advisory is dedicated to providing exceptional tax, audit, and advisory services to clients in Nairobi and beyond. Our commitment is to help businesses thrive through insightful strategies and expert guidance. We leverage our industry knowledge and innovative approaches to deliver lasting value.</p>
+                <div class="icons-f">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            <div class="cl">
+                <div class="info-column call-anytime">
+                    <i class="fas fa-phone fa-3x"></i>
+                    <h4>Call Anytime</h4>
+                    <p>+254703243240</p>
+                    <p>+254704900901</p>
+                    <h2>Eric Nyamosi</h2>
+                    <h2>Director</h2>
+                </div>
+                <div class="footer-column">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li>Tax Services</li>
+                        <li>Audit & Assurance</li>
+                        <li>Strategic Advisory</li>
+                        <!-- Add more services as needed -->
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Why Choose Us</h4>
+                    <p>We are experts in the field with years of experience.</p>
+                    <p>Our clients trust us for our integrity and professionalism.</p>
+                    <p>We deliver exceptional results that drive business success.</p>
+                </div>
+            </div>
+            <div class="footer-column" style="margin: 20px 0; text-align: center;">
+                <p style="color: yellow;">Website Made By LoWiC TechWeb</p>
+            </div>
+        </div>
+    </section>
+     <!-- JavaScript for mobile menu -->
+     <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    
+    <!-- Other sections and JavaScript here -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
+</body>
+</html>
+    
+
